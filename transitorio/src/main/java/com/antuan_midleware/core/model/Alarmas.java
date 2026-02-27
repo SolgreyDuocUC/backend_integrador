@@ -2,6 +2,7 @@ package com.antuan_midleware.core.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -17,6 +18,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Alarmas implements Serializable {
+
+    @Id
+    @Column(name = "Id")
+    private Long id;
 
     @Column(name = "Empresa", length = 3)
     private String empresa;
@@ -47,5 +52,4 @@ public class Alarmas implements Serializable {
 
     @Column(name = "Fecha_Estado")
     private LocalDateTime fechaEstado;
-
 }

@@ -2,6 +2,7 @@ package com.antuan_midleware.core.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -17,6 +18,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TmpDocumento implements Serializable {
+
+    @Id
+    private Long id;
 
     @Column(name = "Empresa", length = 3)
     private String empresa;
