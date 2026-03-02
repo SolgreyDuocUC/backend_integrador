@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LegacyEmpresaRepository extends JpaRepository<Empresa, String> {
+public interface LegacyEmpresaRepository extends JpaRepository<Empresa, Long> {
 }

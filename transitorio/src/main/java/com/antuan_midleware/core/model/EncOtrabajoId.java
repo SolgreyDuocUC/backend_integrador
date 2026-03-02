@@ -16,11 +16,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class EncOtrabajoId implements Serializable {
+
     @Column(name = "Empresa")
     private String empresa;
 
     @Column(name = "Nro_OTrabajo")
     private Long nroOtrabajo;
 
-
+    public Long getFolio() {
+        return nroOtrabajo;
+    }
 }

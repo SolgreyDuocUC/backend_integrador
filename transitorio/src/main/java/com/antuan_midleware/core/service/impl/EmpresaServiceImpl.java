@@ -2,7 +2,7 @@ package com.antuan_midleware.core.service.impl;
 
 import com.antuan_midleware.core.service.EmpresaService;
 import com.antuan_midleware.empresas.model.Empresa;
-import com.antuan_midleware.empresas.repository.EmpresaRepository;
+import com.antuan_midleware.empresas.repository.LegacyEmpresaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class EmpresaServiceImpl implements EmpresaService {
 
-    private final EmpresaRepository empresaRepository;
+    private final LegacyEmpresaRepository empresaRepository;
 
     @Override
     public List<Empresa> findAll() {
@@ -22,7 +22,7 @@ public class EmpresaServiceImpl implements EmpresaService {
 
     @Override
     public Optional<Empresa> findById(String id) {
-        return empresaRepository.findById(id);
+        return empresaRepository.findById(Long.valueOf(id));
     }
 
     @Override
@@ -32,6 +32,6 @@ public class EmpresaServiceImpl implements EmpresaService {
 
     @Override
     public void deleteById(String id) {
-        empresaRepository.deleteById(id);
+        empresaRepository.deleteById(Long.valueOf(id));
     }
 }

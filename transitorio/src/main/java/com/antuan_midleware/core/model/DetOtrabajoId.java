@@ -16,6 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class DetOtrabajoId implements Serializable {
+
     @Column(name = "Empresa")
     private String empresa;
 
@@ -25,5 +26,7 @@ public class DetOtrabajoId implements Serializable {
     @Column(name = "Linea")
     private Integer linea;
 
-
+    public Long getFolio() {
+        return nroOtrabajo;
+    }
 }

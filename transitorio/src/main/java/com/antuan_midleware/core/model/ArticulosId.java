@@ -16,11 +16,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class ArticulosId implements Serializable {
+
     @Column(name = "EMPRESA")
     private String empresa;
 
     @Column(name = "Codigo_Articulo")
     private String codigoArticulo;
 
-
+    public String getCodigo() {
+        return codigoArticulo;
+    }
 }
