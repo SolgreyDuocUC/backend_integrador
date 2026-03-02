@@ -52,6 +52,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- H2 DRIVER -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
